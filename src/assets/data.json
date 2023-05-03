@@ -1,0 +1,19 @@
+[
+    {
+        "employeeId":7263,
+        "employeeName": "Pavithra",
+        "employeeAge": 20,
+        "employeeEmailId": "pavithra@il.com",
+        "employeeSkills": ["Java","AWS"]
+    },
+    {
+        "employeeId":7264,
+        "employeeName": "abc",
+        "employeeAge": 23,
+        "employeeEmailId": "abc@il.com",
+        "employeeSkills": ["Python","ML"]
+    }
+]
+
+
+

@@ -1,0 +1,23 @@
+<mat-card>
+<div *ngIf="!isReady">
+    <span>Enter the userName: </span> <input type="text" [(ngModel)]="userName">
+    <br>
+    <button (click)="fetchData()">Get the details</button>
+</div>
+</mat-card>
+<mat-card>
+<div *ngIf="isReady">
+<table>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Location</th>
+    <th>Company</th>
+    <tr>
+    <td>{{ user.name }}</td>
+    <td>{{ user.id }}</td>
+    <td>{{ user.location }}</td>
+    <td>{{user.company}}</td>
+    </tr>
+    </table>
+</div>
+</mat-card>

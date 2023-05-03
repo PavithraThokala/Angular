@@ -1,0 +1,27 @@
+<mat-card>
+<div *ngIf="isReady">
+    
+   <span> Crypto Value of {{cpCurrency}} in</span>
+   <hr>
+   <table>
+    <th>USD</th>
+    <th>JPY</th>
+    <th>EUR</th>
+    <tr>
+    <td>{{ response.USD }}</td>
+    <td>{{ response.JPY }}</td>
+    <td>{{ response.EUR }}</td>
+    </tr>
+    </table>
+    <br>
+    <button (click)="isReady = false">Enter new currency name</button>
+</div>
+</mat-card>
+  
+<mat-card>
+<div *ngIf="!isReady">
+    <span>Enter the currency Name:</span> <input type="text" [(ngModel)]="currencyName" >
+    <br>
+    <button (click)="fetchResponse(); cpCurrency=currencyName;currencyName=''">Get the details</button>
+</div>
+</mat-card>

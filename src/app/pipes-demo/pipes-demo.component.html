@@ -1,0 +1,19 @@
+<mat-card>
+{{dateTimeObj | date: 'fullDate'}}
+<br>
+{{dateTimeObj | date:'shortDate'}}
+<br>
+{{dateTimeObj | date: 'long'}}
+<br>
+{{dateTimeObj | date:'fullTime'}}
+<br>
+{{amount | currency: 'USD':'symbol':'5.3-4'}}
+<br>
+{{amount | currency:'EUR':'symbol':'5.3-4'}}
+<br>
+{{data | uppercase}}
+<br>
+{{data | lowercase}}
+<br>
+{{pctValue | percent}} 
+</mat-card>

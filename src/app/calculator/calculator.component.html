@@ -1,0 +1,20 @@
+<mat-card>
+<div>
+
+    <span>Enter First Number : </span> <input type="number"  (input)="menuFunction()"  [(ngModel)]="firstNumber"  name="n1" id="1">
+    <br>
+    <span>Enter Second Number : </span>  <input type="number" (input)="menuFunction()"  [(ngModel)]="secondNumber" name="n2" id="2">
+    <br>
+    <span>{{optionText}} of {{firstNumber}} and {{secondNumber}} is {{result}}</span>
+    <select  [(ngModel)]="optionText"   (ngModelChange)="mapOptionToEnum()"  >
+
+        <option>  Addition </option>
+        <option>  Subtraction </option>
+        <option>  Multiplication </option>
+        <option>  Division </option>
+
+    </select>
+    
+    
+</div>
+</mat-card>

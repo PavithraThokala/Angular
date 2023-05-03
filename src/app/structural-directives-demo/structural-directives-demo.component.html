@@ -1,0 +1,10 @@
+<mat-card>
+<p>structural-directives-demo works!</p>
+<ng-template #message>
+    Hello everyone
+</ng-template>
+
+<ng-container *ngIf="!isReady else message">
+    <button (click)="isReady=true">See message </button>
+</ng-container>
+</mat-card>

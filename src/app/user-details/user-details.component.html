@@ -1,0 +1,22 @@
+<div>
+    Enter Username : <input type="text" [(ngModel)]="userName" name="n1" id="1" >
+    <br>
+</div>
+
+<div *ngIf="!isReady">
+    <button (click)="fetchData()" mat-raised-button color="accent">Get User Data</button>
+</div>
+<div *ngIf="isReady">
+ID: {{ user.id }}
+<br>
+Full Name: {{ user.name | uppercase }}
+<br>
+Bio: {{ user.bio }}
+<br>
+Company: <p style="color:blue;">{{ user.company }}</p>
+<br>
+Location: {{ user.location }}
+<form>
+    <input type="reset">
+</form>
+</div>

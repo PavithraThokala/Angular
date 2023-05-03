@@ -1,0 +1,23 @@
+<mat-card>
+    <div *ngIf="!isReady">
+        <span>Enter the userName: </span> <input type="text" [(ngModel)]="userName">
+        <br>
+        <button (click)="fetchProjectResponse()">Get the repo details</button>
+    </div>
+</mat-card>
+<mat-card>
+<div *ngIf="isReady">
+<table>
+    <th>Full Name</th>
+    <th>Node ID</th>
+    <th>Default Branch</th>
+    <th>Open Issues</th>
+    <tr *ngFor="let repo of repos "> 
+        <td>{{repo.full_name}}</td>
+        <td>{{repo.node_id}}</td>
+        <td>{{repo.default_branch}}</td>
+        <td>{{repo.open_issues}}</td>
+    </tr>
+</table>
+</div>
+</mat-card>

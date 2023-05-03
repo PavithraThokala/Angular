@@ -1,0 +1,29 @@
+<mat-card>
+<table>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Age</th>
+    <th>Email Id</th>
+    <th>Skills</th>
+    <tr *ngFor="let employee of employeeRecord">
+        <td>{{employee.employeeName}}</td>
+        <td>{{employee.employeeId}}</td>
+        <td>{{employee.employeeAge}}</td>
+        <td>{{employee.employeeEmailId}}</td>
+        <td>
+            <ul *ngFor="let skill of employee.employeeSkills">
+                <li>{{skill}}</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<div *ngFor="let entry of navArray">
+    
+    <mat-card-actions>
+        <div class="button-container">
+            <button mat-button routerLink="{{entry}}" mat-stroked-button color="black" >{{entry}}</button>
+        </div>
+    </mat-card-actions>
+
+</div>
+</mat-card>
